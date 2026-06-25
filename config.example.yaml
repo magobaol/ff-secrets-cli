@@ -1,0 +1,3 @@
+# Client config (flat key: value). Copy to ~/.config/ff-secrets/config.yaml.
+# Endpoint of ff-secrets-server on the LAN — set the real host:port.
+server-endpoint: http://SERVER_HOST:8666
