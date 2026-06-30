@@ -45,7 +45,8 @@ server-endpoint: http://SERVER_HOST:8666
 See `config.example.yaml`. Override the path with `FF_SECRETS_CONFIG`.
 
 ## Install
-Symlink the entrypoint into your `PATH` (the command stays `ff-secrets`):
+From the source directory:
 ```
-ln -s "$PWD/bin/ff-secrets" ~/.local/bin/ff-secrets
+make install
 ```
+This builds a single-file executable with `zipapp` and places it on your `PATH` as `~/.local/bin/ff-secrets`. Being pure standard library, the whole package collapses into one self-contained `.pyz` with a `python3` shebang — no build toolchain and no virtualenv. Override the install prefix with `PREFIX` (default `~/.local`).
